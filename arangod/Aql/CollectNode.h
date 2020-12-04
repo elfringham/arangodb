@@ -128,6 +128,13 @@ class CollectNode : public ExecutionNode {
   /// @brief estimateCost
   CostEstimate estimateCost() const override final;
 
+  /// @brief whether or not the count flag is set
+  bool count() const;
+  /// @brief set the count option
+  void count(bool value);
+
+  bool hasOutVariableButNoCount() const;
+
   /// @brief whether or not the node has an outVariable (i.e. INTO ...)
   bool hasOutVariable() const;
 
