@@ -238,7 +238,7 @@ template<
     return (transitions_begin_ + s*num_labels_)[label_offset];
   }
 
-  virtual void SetState(StateId s) noexcept final {
+  virtual void SetState(StateId s) noexcept override final {
     assert(!error_);
     assert(s*num_labels_ < transitions_.size());
     state_begin_ = transitions_begin_ + s*num_labels_;
