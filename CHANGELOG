@@ -1,6 +1,9 @@
 devel
 -----
 
+* Fix the places where inadvertent dependency on x86 architecture CPUs
+  has been introduced unconditionally which prevented building for aarch64
+
 * change arangosh client behavior:
  - *_RAW methods will never add a `body` to HEAD responses
  - *_RAW methods will now always return velocypack-typed responses in Buffers
